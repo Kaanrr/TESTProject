@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3749688995093585684}
   - component: {fileID: 2253363536431661976}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GrassGround
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -65,7 +65,7 @@ GameObject:
   - component: {fileID: 1675236740697980044}
   - component: {fileID: 8566064250778998350}
   - component: {fileID: 8978170253770544452}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}

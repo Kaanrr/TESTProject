@@ -103,7 +103,10 @@ public class PlayerNavigator : MonoBehaviour
         if (direction.magnitude != 01f && _isGrounded)
         {
             GameDirector.instance.audioManager.PlayPlayerWalkSFX();
+            
         }
+
+
 
          
     }

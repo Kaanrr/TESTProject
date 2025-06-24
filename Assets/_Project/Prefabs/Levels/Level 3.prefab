@@ -48,7 +48,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8275570560798685520}
   m_Layer: 0
-  m_Name: Coins
+  m_Name: Collectables
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,6 +75,8 @@ Transform:
   - {fileID: 2352865435820061566}
   - {fileID: 6223218314179223332}
   - {fileID: 7586954759371258461}
+  - {fileID: 1214204889855924898}
+  - {fileID: 5752648645478960508}
   m_Father: {fileID: 8543020924335494120}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4941671924404196457
@@ -110,9 +112,8 @@ Transform:
   m_Children:
   - {fileID: 9055438915800775081}
   - {fileID: 1648981855386911400}
-  - {fileID: 5752648645478960508}
   - {fileID: 8275570560798685520}
-  - {fileID: 1214204889855924898}
+  - {fileID: 2271344660534754407}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7328881612446934351
@@ -159,6 +160,37 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: be6320b1a3d16e0459df10d5a546097c, type: 2}
   m_BuildHeightMesh: 0
+--- !u!1 &6951918572006070049
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2271344660534754407}
+  m_Layer: 0
+  m_Name: Stuff
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2271344660534754407
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6951918572006070049}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.6620507, y: -3.4263988, z: 11.132517}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8543020924335494120}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8194629953003036203
 GameObject:
   m_ObjectHideFlags: 0
@@ -294,19 +326,19 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 8543020924335494120}
+    m_TransformParent: {fileID: 8275570560798685520}
     m_Modifications:
     - target: {fileID: 1336909862034335930, guid: 656ed2a0e45e28443850b5261f716fcb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.5112085
+      value: -1.1442306
       objectReference: {fileID: 0}
     - target: {fileID: 1336909862034335930, guid: 656ed2a0e45e28443850b5261f716fcb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.25
+      value: 7.7366185
       objectReference: {fileID: 0}
     - target: {fileID: 1336909862034335930, guid: 656ed2a0e45e28443850b5261f716fcb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 19.653233
+      value: 10.10568
       objectReference: {fileID: 0}
     - target: {fileID: 1336909862034335930, guid: 656ed2a0e45e28443850b5261f716fcb, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1178,19 +1210,19 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 8543020924335494120}
+    m_TransformParent: {fileID: 8275570560798685520}
     m_Modifications:
     - target: {fileID: 1339324965879450284, guid: 48f73c8f45abd0b4eaf02a91b72714a1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.300306
+      value: 5.644867
       objectReference: {fileID: 0}
     - target: {fileID: 1339324965879450284, guid: 48f73c8f45abd0b4eaf02a91b72714a1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 8.486618
       objectReference: {fileID: 0}
     - target: {fileID: 1339324965879450284, guid: 48f73c8f45abd0b4eaf02a91b72714a1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 22.1
+      value: 12.552448
       objectReference: {fileID: 0}
     - target: {fileID: 1339324965879450284, guid: 48f73c8f45abd0b4eaf02a91b72714a1, type: 3}
       propertyPath: m_LocalRotation.w

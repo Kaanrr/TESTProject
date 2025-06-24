@@ -108,7 +108,7 @@ MonoBehaviour:
   eyeLights:
   - {fileID: 3186463660327030672}
   - {fileID: 550885426859985281}
-  flashDuration: 0.2
+  flashDuration: 0.1
   flashMaterial: {fileID: 2100000, guid: 2bd107914262a294bafd9fd3f9913183, type: 2}
   originalMaterial1: {fileID: 2100000, guid: cde7794b72ba29b4fbab0dc5d3c3faf0, type: 2}
   originalMaterial2: {fileID: 2100000, guid: ae42370e12965084a922b0d579f62112, type: 2}
@@ -129,6 +129,7 @@ MonoBehaviour:
   - {fileID: 5311873114757130151}
   - {fileID: 4061025608097841131}
   - {fileID: 2491571620232798130}
+  getHitStopDuration: 0.1
 --- !u!114 &4752830893287252586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -656,6 +657,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7475382674126383153}
     m_Modifications:
+    - target: {fileID: 4947341133287819974, guid: 663bc8d3e58b6574086705273055cb8b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4947341133287819974, guid: 663bc8d3e58b6574086705273055cb8b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4947341133287819974, guid: 663bc8d3e58b6574086705273055cb8b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4947341133287819974, guid: 663bc8d3e58b6574086705273055cb8b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

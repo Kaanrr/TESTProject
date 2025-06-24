@@ -16,6 +16,7 @@ public class GameDirector : MonoBehaviour
     public MainMenu mainMenu;
     public PlayerHitUI playerHitUI;
     public PlayerHealthUI playerHealthUI;
+    public MessageUI messageUI;
 
     public CameraHolder cameraHolder;
 
@@ -30,6 +31,7 @@ public class GameDirector : MonoBehaviour
     void Start()
     {
         gameState = GameState.MainMenu;
+        HideInGameUI();
     }
     private void Update()
     {
@@ -46,12 +48,30 @@ public class GameDirector : MonoBehaviour
         {
             LoadPreviousLevel();
         }
-       
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            playerHealthUI.Show();
+        }
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            playerHealthUI.Hide();
+        }
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Time.timeScale = 0;
+            mainMenu.Show();
+            mainMenu.EnabledResumeButton();
+            mainMenu.startButtonTMP.text = "RESTART";
+            gameState = GameState.MainMenu;
+            HideInGameUI();
+        }
+
     }
 
     public void RestartLevel()
     {
         gameState = GameState.GamePlay;
+        ShowInGameUI();
         levelManager.RestartLevelManager();
         player.RestartPlayer();
         playerHealthUI.Show();
@@ -86,7 +106,14 @@ public class GameDirector : MonoBehaviour
 
     }
 
-    
+    public void ShowInGameUI()
+    {
+        coinManager.coinUI.Show();
+    }
+    public void HideInGameUI()
+    {
+        coinManager.coinUI.Hide();
+    }
 }
 
 public enum GameState

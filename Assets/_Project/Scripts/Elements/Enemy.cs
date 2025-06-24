@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour
     private Collider _aliveCollider;
     private int _currentHealth;
     private NavMeshAgent _navAgent;
-    private Player _player;
+    private Player _player; 
     private Transform _transform;
     private float _attackTimer;
     private HealthBar _healthBar;
@@ -39,6 +39,9 @@ public class Enemy : MonoBehaviour
     public Material originalMaterial2;
     public List<Renderer> renderers1;
     public List<Renderer> renderers2;
+
+    private Coroutine _getHitCoroutine;
+    public float getHitStopDuration;
 
 
     private void Awake()
@@ -136,7 +139,11 @@ public class Enemy : MonoBehaviour
         {
             Die();
         }
-        StartCoroutine(FlashEnemyCoroutine());
+        if(enemyState != EnemyState.Dead)
+        {
+            _getHitCoroutine = StartCoroutine(EnemyGetHitCoroutine());
+        }
+            
 
     }
 
@@ -165,6 +172,7 @@ public class Enemy : MonoBehaviour
         {
             l.DOIntensity(0, .1f);
         }
+        StopCoroutine(_getHitCoroutine);
     }
 
     void ExpireEnemy()
@@ -183,7 +191,7 @@ public class Enemy : MonoBehaviour
         deadCollider.enabled = true;
     }
 
-    IEnumerator FlashEnemyCoroutine()
+    IEnumerator EnemyGetHitCoroutine()
     {
         foreach (var r in renderers1)
         {
@@ -192,6 +200,10 @@ public class Enemy : MonoBehaviour
         foreach (var r in renderers2)
         {
             r.material = flashMaterial;
+        }
+        if (_navAgent.enabled)
+        {
+            _navAgent.isStopped = true;
         }
         yield return new WaitForSeconds(flashDuration);
         foreach (var r in renderers1)
@@ -202,6 +214,12 @@ public class Enemy : MonoBehaviour
         {
             r.material = originalMaterial2;
         }
+        yield return new WaitForSeconds(getHitStopDuration);
+        if(_navAgent.enabled)
+        {
+            _navAgent.isStopped = false;
+        }
+        
     }
     
 }
